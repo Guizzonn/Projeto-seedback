@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*
+min-width:576px Phones
+min-width:768px Tablets
+min-width:992px Desktops
+min-width:1200px Large screens
+*/
+
+:root {
+    --cor00: #0F71F2;
+    --cor01: #0F88F2;
+    --cor02: #139DF2;
+    --cor03: #21AFBF;
+    --cor04: #9AD914;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonte-padrao);
+    box-sizing: border-box;
+   
+font-family: Arial, Helvetica, sans-serif;
+}
+
