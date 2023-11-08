@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedback Login</title>
+    <link rel="stylesheet" href="/estilos/stylelogin.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+    <script>
+        function handleCredentialResponse(response) {
+            const data = jwt_decode(response.credential)
+            console.log(data)
+        }
+          
+        window.onload = function () {
+          google.accounts.id.initialize({
+            client_id: "462131219179-1qq0049f7gtjb9pom6alno80souppks3.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+          });
+          google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),{
+                type:"standard",
+                shape:"pill",
+                theme:"filled_black",
+                text:"signin_with",
+                size:"large",
+                logo_alignment:"left",
+                width:"300px"
+            }
+              // customization attributes
+          );
+          google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+      </script>
+</head>
+
+<body>
+    <header>Seedback</header>
+    <main>
+        <div id="buttonDiv">
+        </div>
+    </main>
+    <footer>
+    </footer>
+    
+</body>
+
+</html>

@@ -26,7 +26,7 @@ min-width:1200px Large screens
     --fonte-destaque: 'Bebas Neue', cursive;
 }
 
-@media screen and (min-width:768) {
+@media screen and (max-width: 700px) {
 
 }
 
@@ -43,6 +43,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color:linen;
+    height: 100vh;
 }
 
 header {
@@ -63,8 +64,9 @@ main {
     list-style-type: none;
     display: block;
  }
+
 .user {
-    height:calc(100vh - 100px);
+    height:calc(100vh - 10vh);
     display: grid;
     grid-column: 1/2;
     grid-template-rows: repeat(6, 1fr);
@@ -103,10 +105,7 @@ li {
  
 .shop a{
     width: 200px;
-    height: 200px;
-    display: grid;
-    justify-items: center;
-    margin-top: 1em;
+    height: 50px;
 }
 
 .shop img {
@@ -115,12 +114,13 @@ li {
 
 button {
     width: 200px;
-    height: 30px;
+    height: 40px;
     border-radius: 10px;
     border: 2px solid rgba(169, 207, 17, 0.692);
-    margin-top: 20px;
     background-color: var(--cor04);
-   color: white;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer;
 }
 
 footer {
